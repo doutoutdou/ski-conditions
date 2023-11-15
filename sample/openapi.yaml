@@ -1,0 +1,19 @@
+openapi: "3.0.0"
+info:
+  description: This is the swagger file that goes with our server code
+  version: "1.0.0"
+  title: Open api documentation for ski-conditions api
+servers:
+  - url: "/api/v1"
+
+paths:
+  /conditions:
+    get:
+      operationId: "api.conditions"
+      responses:
+        200:
+          description: "ok"
+          content:
+            application/json:
+              schema:
+                type: string
