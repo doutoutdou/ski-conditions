@@ -1,11 +1,13 @@
 class Trails:
-    def __init__(self):
-
+    def __init__(self, name):
+        self._name = name
         self._total_trails = 0
         self._opened_trails = 0
         self._total_chair_lifts = 0
         self._opened_chair_lifts = 0
 
+    def get_name(self):
+        return self._name
     def get_total_trails(self):
         return self._total_trails
 
