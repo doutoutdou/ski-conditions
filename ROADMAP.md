@@ -1,6 +1,8 @@
 
 # Fonctionnalites
 Gerer enneigement 
+Gerer % ouverture
+Gerer temperatures
 ne pas retourner les donnees brutes mais faire des stats sur le nombre afin davoir des %
  
 
