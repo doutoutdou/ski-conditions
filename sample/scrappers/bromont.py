@@ -1,14 +1,12 @@
-import requests
-from bs4 import BeautifulSoup
-
+from helpers.scrapper_helper import get_html
 from models.trails import Trails
-__url = "https://www.bromontmontagne.com/en/detailed-conditions/"
 
+__url = "https://www.bromontmontagne.com/en/detailed-conditions/"
 
 def parse_bromont():
     bromont_conditions = Trails('bromont')
-    page = requests.get(__url)
-    content = BeautifulSoup(page.content, "html.parser")
+
+    content = get_html(__url)
 
     trail_root = content.find(id="recap-pistes").find("div", class_="etat")
     # take the first

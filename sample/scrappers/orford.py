@@ -1,6 +1,4 @@
-import requests
-from bs4 import BeautifulSoup
-
+from helpers.scrapper_helper import get_html
 from models.trails import Trails
 
 __url = "https://montorford.com/en-ca/winter/conditions-ski"
@@ -8,8 +6,7 @@ __url = "https://montorford.com/en-ca/winter/conditions-ski"
 
 def parse_orford():
     orford_conditions = Trails('orford')
-    page = requests.get(__url)
-    content = BeautifulSoup(page.content, "html.parser")
+    content = get_html(__url)
 
     trails_root = (content.find("span", string="Trails")
                    .parent

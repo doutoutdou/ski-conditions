@@ -1,14 +1,12 @@
-import requests
-from bs4 import BeautifulSoup
-
+from helpers.scrapper_helper import get_html
 from models.trails import Trails
+
 __url = "https://montsutton.com/en/the-mountain/ski-conditions/"
 
 
 def parse_sutton():
     sutton_conditions = Trails('sutton')
-    page = requests.get(__url)
-    content = BeautifulSoup(page.content, "html.parser")
+    content = get_html(__url)
 
     trails = content.find("div", class_="icon_btn icon_track")
 

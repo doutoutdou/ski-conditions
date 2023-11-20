@@ -1,6 +1,4 @@
-import requests
-from bs4 import BeautifulSoup
-
+from helpers.scrapper_helper import get_html
 from models.trails import Trails
 
 __url = "https://owlshead.com/conditions-de-ski/"
@@ -8,8 +6,7 @@ __url = "https://owlshead.com/conditions-de-ski/"
 
 def parse_owl_head():
     owl_head_conditions = Trails('owl head')
-    page = requests.get(__url)
-    content = BeautifulSoup(page.content, "html.parser")
+    content = get_html(__url)
 
     trails = (content.find("h4", string="Pistes ouvertes")
               .parent
