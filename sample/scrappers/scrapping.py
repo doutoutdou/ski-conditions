@@ -9,7 +9,7 @@ _conditions = []
 # retrieve conditions for every mountain and save it
 def scrap():
     global _conditions
-    _conditions = [parse_sutton(), parse_bromont(), parse_owl_head(), parse_orford()]
+    _conditions = [parse_bromont(), parse_orford(), parse_owl_head(), parse_sutton()]
 
 
 # return conditions previously retrieved

@@ -8,6 +8,7 @@ class Trails:
 
     def get_name(self):
         return self._name
+
     def get_total_trails(self):
         return self._total_trails
 
@@ -31,5 +32,3 @@ class Trails:
 
     def set_total_chair_lifts(self, value):
         self._total_chair_lifts = value
-
-
