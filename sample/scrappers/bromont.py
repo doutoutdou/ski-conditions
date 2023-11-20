@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 
-from trails import Trails
+from models.trails import Trails
 __url = "https://www.bromontmontagne.com/en/detailed-conditions/"
 
 

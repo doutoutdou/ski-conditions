@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 
-from trails import Trails
+from models.trails import Trails
 
 __url = "https://owlshead.com/conditions-de-ski/"
 

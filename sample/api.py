@@ -1,7 +1,9 @@
-from bromont import parse_bromont
-from owlhead import parse_owl_head
-from sutton import parse_sutton
+from scrappers.bromont import parse_bromont
+from scrappers.owlhead import parse_owl_head
+from scrappers.sutton import parse_sutton
+from scrappers.orford import parse_orford
 
 
 def conditions():
-    return [parse_sutton(), parse_bromont(), parse_owl_head()]
+    return [parse_sutton(), parse_bromont(), parse_owl_head(), parse_orford()]
+

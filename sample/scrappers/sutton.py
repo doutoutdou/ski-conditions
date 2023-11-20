@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 
-from trails import Trails
+from models.trails import Trails
 __url = "https://montsutton.com/en/the-mountain/ski-conditions/"
 
 
