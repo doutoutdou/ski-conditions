@@ -15,8 +15,13 @@ def scrapping():
 
 # Adding cron to scrappe
 cron = BackgroundScheduler()
-cron.add_job(scrapping, 'interval', seconds=5)
+# Scrap when the application start
+cron.add_job(scrapping)
+# Scrap every 6 hours to update data
+cron.add_job(scrapping, 'interval', hours=6)
 cron.start()
+
+print(cron.get_jobs())
 
 # Shutdown the cron thread if the web process is stopped
 atexit.register(lambda: cron.shutdown(wait=False))
