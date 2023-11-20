@@ -23,7 +23,7 @@ def parse_owl_head():
              .get_text()
              .split("/"))
 
-    owl_head_conditions.set_opened_trails(lifts[0])
-    owl_head_conditions.set_total_trails(lifts[1])
+    owl_head_conditions.set_opened_chair_lifts(lifts[0])
+    owl_head_conditions.set_total_chair_lifts(lifts[1])
 
     return vars(owl_head_conditions)
